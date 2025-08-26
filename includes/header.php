@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Deportivo Patagones — Tienda</title>
-  <meta name="description" content="Tienda de productos deportivos: remeras, pantalones, calzados y balones" />
+  <title>Volksmotor — Tienda De Autos Online</title>
+  <meta name="description" content="Tienda de autos de volksmotor" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>

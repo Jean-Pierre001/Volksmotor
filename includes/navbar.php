@@ -10,7 +10,7 @@
       <li><a href="#contacto" class="nav-link text-gray hover:text-blue-300">Contacto</a></li>
     </ul>
     <!-- Botón para abrir el modal -->
-    <button id="openModal" class="bg-white hover:bg-blue-700 text-black px-9 py-3 rounded-full font-semibold shadow-md relative">
+    <button class="openModal bg-white hover:bg-blue-700 text-black px-9 py-3 rounded-full font-semibold shadow-md relative">
       Consultar
     </button>
     <!-- Línea decorativa debajo de la navbar -->

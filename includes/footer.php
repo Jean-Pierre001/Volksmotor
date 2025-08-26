@@ -11,7 +11,6 @@
       <div>
         <h4 class="text-white font-semibold mb-2">Enlaces</h4>
         <ul class="space-y-1">
-          <li><a href="#autos" class="hover:text-blue-400 transition">Autos</a></li>
           <li><a href="#info" class="hover:text-blue-400 transition">Información</a></li>
           <li><a href="#galeria" class="hover:text-blue-400 transition">Galería</a></li>
           <li><a href="#contacto" class="hover:text-blue-400 transition">Contacto</a></li>
