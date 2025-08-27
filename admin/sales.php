@@ -1,6 +1,5 @@
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/sidebar.php'; ?>
-<?php include 'includes/modals/crud_modals.php'; ?>
 
 <div class="flex-1 flex flex-col min-h-screen ml-0 md:ml-64">
   <header class="navbar flex justify-between items-center px-6 py-4 shadow-sm">

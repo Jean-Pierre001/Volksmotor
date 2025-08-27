@@ -10,7 +10,7 @@
           <span class="text-gray-900 font-medium">Hola, Admin</span>
           <!-- Foto de perfil con modal -->
           <button data-modal-toggle="profileModal">
-              <img src="https://i.pravatar.cc/150?img=3" alt="Perfil" class="w-10 h-10 rounded-full cursor-pointer">
+              <img src="https://i.pravatar.cc/150?img=3" alt="Perfil" class="openModalProfile w-10 h-10 rounded-full cursor-pointer">
           </button>
       </div>
   </header>
@@ -18,8 +18,7 @@
   <!-- Main content -->
   <main class="p-6 flex-1">
     <div class="flex justify-between items-center mb-6">
-      <h2 class="text-xl font-bold text-gray-900">Autos Disponibles</h2>
-      <button data-modal-toggle="carModal" class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700">Agregar Auto</button>
+      <button class="CarModal px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700">Agregar Auto</button>
     </div>
 
     <!-- Tabla de Autos -->
@@ -31,27 +30,30 @@
             <th class="px-4 py-2 text-gray-700 font-medium">Modelo</th>
             <th class="px-4 py-2 text-gray-700 font-medium">Año</th>
             <th class="px-4 py-2 text-gray-700 font-medium">Precio</th>
+            <th class="px-4 py-2 text-gray-700 font-medium">U. Disponibles</th>
             <th class="px-4 py-2 text-gray-700 font-medium">Acciones</th>
           </tr>
         </thead>
         <tbody class="bg-white">
           <tr class="border-b hover:bg-gray-50 transition">
-            <td class="px-4 py-2">Toyota</td>
+            <td class="px-4 py-2">Polo</td>
             <td class="px-4 py-2">Corolla</td>
             <td class="px-4 py-2">2023</td>
             <td class="px-4 py-2">$25,000</td>
+            <td class="px-4 py-2">6</td>
             <td class="px-4 py-2 space-x-2">
-              <button data-modal-toggle="carModal" class="px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-500">Editar</button>
+              <button class="CarModal px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-500">Editar</button>
               <button class="px-2 py-1 bg-red-600 text-white rounded hover:bg-red-500">Eliminar</button>
             </td>
           </tr>
           <tr class="border-b hover:bg-gray-50 transition">
-            <td class="px-4 py-2">Honda</td>
+            <td class="px-4 py-2">Amarok</td>
             <td class="px-4 py-2">Civic</td>
             <td class="px-4 py-2">2022</td>
             <td class="px-4 py-2">$23,000</td>
+            <td class="px-4 py-2">No dispobibles</td>
             <td class="px-4 py-2 space-x-2">
-              <button data-modal-toggle="carModal" class="px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-500">Editar</button>
+              <button class="CarModal px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-500">Editar</button>
               <button class="px-2 py-1 bg-red-600 text-white rounded hover:bg-red-500">Eliminar</button>
             </td>
           </tr>
@@ -69,7 +71,7 @@
 <!-- Modals -->
 
 <!-- Modal Perfil -->
-<div id="profileModal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<div id="ProfileModal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-xl shadow-lg w-96 p-6 relative">
     <h2 class="text-xl font-bold mb-4 text-gray-900">Perfil de Usuario</h2>
     <form class="space-y-4">
@@ -86,7 +88,7 @@
         <input type="password" class="w-full border p-2 rounded" placeholder="Nueva contraseña">
       </div>
       <div class="flex justify-between mt-4">
-        <button type="button" data-modal-toggle="profileModal" class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700">Cerrar</button>
+        <button id="closeModalProfile" type="button" class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700">Cerrar</button>
         <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">Guardar cambios</button>
       </div>
     </form>
@@ -94,7 +96,7 @@
 </div>
 
 <!-- Modal Agregar/Editar Auto -->
-<div id="carModal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<div id="CarModal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-xl shadow-lg w-96 p-6 relative">
     <h2 class="text-xl font-bold mb-4 text-gray-900">Agregar / Editar Auto</h2>
     <form class="space-y-4">
@@ -115,7 +117,7 @@
         <input type="number" class="w-full border p-2 rounded" placeholder="20000">
       </div>
       <div class="flex justify-between mt-4">
-        <button type="button" data-modal-toggle="carModal" class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700">Cerrar</button>
+        <button id="closeModalCar" type="button" class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700">Cerrar</button>
         <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">Guardar</button>
       </div>
     </form>
@@ -124,3 +126,24 @@
 
 <!-- Flowbite Script al final para que funcione correctamente -->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+  <!-- Modales -->
+  <script>
+
+    // Modal usuario
+    const openModalBtnProfile = document.querySelectorAll('.openModalProfile');
+    const closeModalBtnProfile = document.getElementById('closeModalProfile');
+    const ProfileModal = document.getElementById('ProfileModal');
+    openModalBtnProfile.forEach(btn => btn.addEventListener('click', () => ProfileModal.classList.remove('hidden')));
+    closeModalBtnProfile.addEventListener('click', () => ProfileModal.classList.add('hidden'));
+    window.addEventListener('click', (e) => { if(e.target===ProfileModal) ProfileModal.classList.add('hidden'); });
+
+    // Modal Registro
+    const openModalBtnCar = document.querySelectorAll('.openModalCar');
+    const closeModalBtnCar = document.getElementById('closeModalCar');
+    const CarModal = document.getElementById('CarModal');
+    openModalBtnCar.forEach(btn => btn.addEventListener('click', () => CarModal.classList.remove('hidden')));
+    closeModalBtnCar.addEventListener('click', () => CarModal.classList.add('hidden'));
+    window.addEventListener('click', (e) => { if(e.target===CarModal) CarModal.classList.add('hidden'); });
+
+  </script>
