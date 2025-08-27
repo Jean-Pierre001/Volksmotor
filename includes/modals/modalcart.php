@@ -1,9 +1,9 @@
 <!-- Modal Métodos de Pago -->
-<div id="payModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+<div id="modalCart" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
   <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative animate-fadeIn">
     
     <!-- Botón cerrar -->
-    <button id="closePayModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 font-bold text-xl">&times;</button>
+    <button id="closeModalCart" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 font-bold text-xl">&times;</button>
 
     <h2 class="text-2xl font-bold mb-6 text-center text-gray-700">Elige un método de pago</h2>
 
